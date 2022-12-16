@@ -1,3 +1,10 @@
+/**
+ * It generates a random 3x3 matrix, and returns a pointer to the first element of the matrix
+ * 
+ * @param get_key if true, it will print the matrix key
+ * 
+ * @return a pointer to the first element of the array.
+ */
 int* matrix_key(bool get_key) {
 
     static int matrix_c[9];
@@ -6,12 +13,10 @@ int* matrix_key(bool get_key) {
 
     srand(time(NULL));
 
-    // matriz llave generada aleatoriamente 
     for (int i = 0; i < 9; i++) {
         matrix_c[i] = (rand() % 27);      
     } 
 
-    // matriz pivote para calcular determinate
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3 ; j++) {    
             pivote[i][j] = matrix_c[count2];

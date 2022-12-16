@@ -1,4 +1,13 @@
 
+/**
+ * It takes a 3x3 matrix and a 3xN matrix and returns a 3xN matrix
+ * 
+ * @param matrix_c is a 3x3 matrix
+ * @param matrix_a is a matrix origin
+ * @param column_a number of columns of matrix a
+ * 
+ * @return a pointer to the first element of the array.
+ */
 int* matrix_ab( int matrix_c[9], int matrix_a[500], int column_a) {
 
     int fila = 3;
@@ -12,8 +21,6 @@ int* matrix_ab( int matrix_c[9], int matrix_a[500], int column_a) {
 
     int count = 0;
 
-    // matriz bidimensional a
-
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < column ; j++) {          
             new_matrix_A[i][j] = matrix_a[count];
@@ -21,18 +28,6 @@ int* matrix_ab( int matrix_c[9], int matrix_a[500], int column_a) {
         }        
         count = 1 + i;
     }
-
-    // printf("\nMatriz a: ");
-    // printf("\n");
-
-    // for (int i = 0; i < 3; i++) {
-    //     for (int j = 0; j < column ; j++) {    
-    //         printf("%i-", new_matrix_A[i][j]);
-    //     }        
-    //     printf("\n");
-    // }
-
-    // matriz bidimensional c
 
     count = 0;
 
@@ -44,19 +39,6 @@ int* matrix_ab( int matrix_c[9], int matrix_a[500], int column_a) {
         count = 1 + i;
     }
     
-    // printf("\nMatriz c: ");
-    // printf("\n");
-
-    // for (int i = 0; i < 3; i++) {
-    //     for (int j = 0; j < 3 ; j++) {    
-    //         printf("%i-", new_matrix_C[i][j]);
-    //     }        
-    //     printf("\n");
-    // }
-
-
-    // matriz bidimensional res
-
     for (int a = 0; a < column; a++) {
         for (int i = 0; i < 3; i++) {
             int suma = 0;
@@ -66,18 +48,6 @@ int* matrix_ab( int matrix_c[9], int matrix_a[500], int column_a) {
             matrix_res[i][a] = suma;
         }
     }
-
-    // printf("\nMatriz res bidimencional: ");
-    // printf("\n");
-
-    // for (int i = 0; i < 3; i++) {
-    //     for (int j = 0; j < column ; j++) {    
-    //         printf("%i-", matrix_res[i][j]);
-    //     }        
-    //     printf("\n");
-    // }
-
-    // matriz lineal res
 
     count = 0;
  
@@ -95,12 +65,6 @@ int* matrix_ab( int matrix_c[9], int matrix_a[500], int column_a) {
         }     
         
     }
-
-    // printf("Matriz res:");
-
-    // for(int i=0; i<3*column; i++) {
-    //     printf("%i_", matrix_res_lineal[i]);
-    // }
 
     return matrix_res_lineal;
 

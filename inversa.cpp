@@ -1,4 +1,11 @@
 
+/**
+ * It calculates the adjoint of a 3x3 matrix.
+ * 
+ * @param key the key matrix
+ * 
+ * @return a pointer to the first element of the array.
+ */
 int* adjunta(int key[3][3] ) {
 
     static int cofA[9];
@@ -16,20 +23,24 @@ int* adjunta(int key[3][3] ) {
     cofA[0] = cof1;
     cofA[3] = cof2;
     cofA[6] = cof3;
-
     cofA[1] = cof4;
     cofA[4] = cof5;
     cofA[7] = cof6;
-
     cofA[2] = cof7;
     cofA[5] = cof8;
     cofA[8] = cof9;
 
     return cofA;
 
-
 }
 
+/**
+ * The function takes a 3x3 matrix as an argument and returns the determinant of the matrix.
+ * 
+ * @param matrix_key The matrix that will be used to calculate the determinant.
+ * 
+ * @return The determinant of the matrix.
+ */
 int determinant(int matrix_key[3][3]) {
 
     int determinante =  (matrix_key[0][0] * matrix_key[1][1] * matrix_key[2][2]) + (matrix_key[0][1] * matrix_key[1][2] * matrix_key[2][0]) + (matrix_key[0][2] * matrix_key[1][0] * matrix_key[2][1]) - (matrix_key[0][2] * matrix_key[1][1] * matrix_key[2][0]) - (matrix_key[0][0] * matrix_key[1][2] * matrix_key[2][1]) - (matrix_key[0][1] * matrix_key[1][0] * matrix_key[2][2]);
@@ -38,6 +49,13 @@ int determinant(int matrix_key[3][3]) {
 
 }
 
+/**
+ * It takes a 3x3 matrix and returns a new 3x3 matrix that is the inverse of the original matrix
+ * 
+ * @param key the key matrix
+ * 
+ * @return a pointer to the first element of the array new_matrix_c.
+ */
 int* inversaMatrixC(int key[3][3]) {
 
     int *matrix_adjunta = adjunta(key);

@@ -1,4 +1,11 @@
 
+/**
+ * It converts the alphabet to a number.
+ * 
+ * @param letter The letter to be converted to a number.
+ * 
+ * @return The letter -1
+ */
 int alphabet(char letter) {
 
     switch (letter) {
@@ -121,6 +128,13 @@ int alphabet(char letter) {
 
 }
 
+/**
+ * It takes a number and returns the corresponding letter of the alphabet.
+ * 
+ * @param number The number to be converted to a letter.
+ * 
+ * @return A letter.
+ */
 char alphabet_reverse(int number) {
 
     char letter;
