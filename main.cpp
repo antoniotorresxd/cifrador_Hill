@@ -22,12 +22,11 @@ main() {
 
     int opt;
     int opt2;
-    char cadena[] = "Prologo a la Autobiografia de Bertrand Russell Tres pasiones simples pero abrumadoramente intensas han gobernado mi vida el ansia de amor la busqueda del conocimiento y una insoportable piedad por el sufrimiento de la humanidad";
+    char cadena[] = "Torres";
     int key[3][3];
     char matrix_cifrado[3][500];
 
-    
-    char msj_cifrado[] = "BNELYDFMYIDPQHSPOOOPYHNMZKPIHVTTIASZIZKIMYCEJURKYAOEGEHWBTGGQBYYBOCQZXZJFMYPKJYYAOMPFX BK JFGTGYYWRXOATWJTTIFJCOSJUSGHYBMTZN LBGOKROBVKCHOWTVPJTVLIMEFRNGXTUGBDNKSELZXYVUOKQTELKENTWCRMSWKZRMGYJKWSXOHIMJIZXNKSELZOAADBPEODNGHYPHMEL";
+    char msj_cifrado[500];
 
     do {
 
@@ -70,6 +69,9 @@ main() {
             break;
 
             case 2:
+
+            printf("Ingresa el mensaje a decifrar: ");
+            scanf("%s", &msj_cifrado);
 
                 for (int i = 0; i < 3; i++) {
 
